@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# React Knowledge Base Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application that allows users to search for knowledge base articles. Users can filter articles by knowledge base section and locale, view search results, and see which articles they have previously viewed.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for knowledge base articles
+- Filter results by section and locale
+- Highlight previously viewed articles
+- Save viewed articles in localStorage
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+react-search-app
+├── public
+│   └── index.html          # Main HTML file
+├── src
+│   ├── components          # React components
+│   │   ├── ArticleCard.tsx # Displays individual articles
+│   │   ├── FilterBar.tsx   # Allows filtering of articles
+│   │   └── SearchBar.tsx   # Input for search queries
+│   ├── pages
+│   │   └── HomePage.tsx    # Main page of the application
+│   ├── services
+│   │   └── api.ts          # API interaction functions
+│   ├── styles
+│   │   └── global.css      # Global styles
+│   ├── utils
+│   │   └── localStorage.ts  # Utility functions for localStorage
+│   ├── App.tsx             # Main application component
+│   ├── main.tsx            # Entry point for the React application
+│   └── types
+│       └── index.ts        # TypeScript types and interfaces
+├── package.json             # npm configuration
+├── tsconfig.json            # TypeScript configuration
+└── vite.config.ts           # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd react-search-app
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+## Usage
+
+- Use the search bar to enter keywords related to the articles you are looking for.
+- Apply filters to narrow down the search results based on sections and locales.
+- Click on an article to view its details. Previously viewed articles will be highlighted for easy identification.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
