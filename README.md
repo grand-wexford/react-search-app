@@ -1,5 +1,3 @@
-# react-search-app
-=======
 # React Knowledge Base Search Application
 
 This project is a web application that allows users to search for knowledge base articles. Users can filter articles by knowledge base section and locale, view search results, and see which articles they have previously viewed.
