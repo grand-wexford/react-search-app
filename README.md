@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # react-search-app
 =======
 # React Knowledge Base Search Application
@@ -61,4 +60,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Built with [React](https://reactjs.org/).
 - Inspired by various search app tutorials.
->>>>>>> Stashed changes
